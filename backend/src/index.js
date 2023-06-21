@@ -12,13 +12,30 @@ server.use((req, res, next) => {
     next()
 })
 
+server.use(jsonServer.bodyParser);
 //server.use(router);
 // Endpoint para poder obtener datos de un registro de la lista por su ID
 server.get("/user/:id", (req, res, next) => {
     console.log("entre")
     const info = require('./data/users.json');
     const id = req.params.id;
-    const data = info.filter(data => data.id == id)
+    const data = info.users.filter(data => data.id == id)
+    console.log(data)
+    if (data == undefined || data == null) {
+        return res.json({
+            "error": `El usuario con ID ${id} no existe`
+        })
+    }
+    res.json(data)
+});
+
+server.post("/login", (req, res, next) => {
+    console.log(req.body)
+    let phoneNumber = req.body.phone
+    let userPassword = req.body.passwd
+    console.log("entre")
+    const info = require('./data/users.json');
+    const data = info.users.filter(data => data.phone_number == phoneNumber && data.password == userPassword)
     console.log(data)
     if (data == undefined || data == null) {
         return res.json({
