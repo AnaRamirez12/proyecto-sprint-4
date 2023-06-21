@@ -1,0 +1,22 @@
+[
+    {
+        "id_user_1": 1,
+        "id_user_2": 2,
+        "chat": [
+            {
+                "send_by": 1,
+                "date": "2023-06-12",
+                "hour": "12:45:34",
+                "message": "holiiii",
+                "viewed": true
+            },
+            {
+                "send_by": 2,
+                "date": "2023-06-12",
+                "hour": "12:45:34",
+                "message": "holiiii que mas?",
+                "viewed": false
+            }
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Ana",
+        "phone_number": "3011111",
+        "password": "1234",
+        "profile_pic_url": "https://.....",
+        "is_online": false,
+        "about": "Soy programadora :D",
+        "last_time": "2023-06-12T12:45:34.000-04:00"
+    },
+    {
+        "id": 2,
+        "name": "Juan",
+        "phone_number": "234445",
+        "password": "12345",
+        "profile_pic_url": "https://.....",
+        "is_online": false,
+        "about": "Soy programador :D",
+        "last_time": "2023-06-13T12:45:34.000-04:00"
+    }
+]
